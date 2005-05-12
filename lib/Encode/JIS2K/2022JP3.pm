@@ -1,7 +1,7 @@
 package Encode::JIS7::2022JP3;
 use strict;
 
-our $VERSION = do { my @r = (q$Revision: 0.1 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+our $VERSION = do { my @r = (q$Revision: 0.2 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 use Encode qw(:fallbacks);
 
@@ -10,7 +10,7 @@ use base qw(Encode::Encoding);
 my $Canon = 'iso-2022-jp-3';
 $Encode::Encoding{$Canon} =
     bless {
-	   Name      =>   'Canon',
+          Name      =>   $Canon,
 	   h2z       =>   1,
 	   jis0212   =>   1,
 	  } => __PACKAGE__;

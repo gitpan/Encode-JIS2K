@@ -1,6 +1,6 @@
 package Encode::JIS2K;
-our $VERSION = "0.01";
- 
+our $VERSION = sprintf "%d.%02d", q$Revision: 0.2 $ =~ /(\d+)/g;
+
 use Encode;
 use XSLoader;
 XSLoader::load(__PACKAGE__,$VERSION);
